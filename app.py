@@ -51,7 +51,7 @@ def hello_world():
     <body onload="updateTime()"> <!-- 使用 onload 事件调用 updateTime 函数 -->
       <h1 class="animated-text">我爱你<span class="heart">❤</span>，小莹！</h1>
       <p id="time-together"></p>
-      <img src="https://c-ssl.duitang.com/uploads/blog/202209/22/20220922161509_bc733.jpeg" alt="">
+      <img src="https://c-ssl.duitang.com/uploads/blog/202209/22/20220922161509_bc733.jpeg" alt="图片说明">
 
     </body>
     </html>
