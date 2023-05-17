@@ -23,7 +23,7 @@ def hello_world():
       </style>
     </head>
     <body>
-      <h1 class="animated-text">我爱你，小莹！</h1>
+      <h1 class="animated-text">我爱你，小莹！\u2764</h1>
     </body>
     </html>
     '''
