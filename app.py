@@ -1,9 +1,8 @@
 from flask import Flask
-import datetime
 
 app = Flask(__name__)
 
-start_time = datetime.datetime(2022, 5, 20)  # 设置起始时间
+start_time = "2022-05-20T00:00:00"  # 设置起始时间
 
 @app.route('/')
 def hello_world():
@@ -29,14 +28,13 @@ def hello_world():
         }}
       </style>
       <script>
-        var days; // 声明全局变量
-
         function updateTime() {{
           var current_time = new Date();
           var start_time = new Date("{start_time}");
           var time_difference = current_time - start_time;
 
-          days = Math.floor(time_difference / (1000 * 60 * 60 * 24));
+          var days = Math.floor(time_difference / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((time_difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
           var minutes = Math.floor((time_difference % (1000 * 60 * 60)) / (1000 * 60));
           var seconds = Math.floor((time_difference % (1000 * 60)) / 1000);
 
