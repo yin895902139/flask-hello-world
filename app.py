@@ -45,12 +45,9 @@ def hello_world():
         setInterval(updateTime, 1000); // 每秒更新一次时间
       </script>
     </head>
-    <body>
+    <body onload="updateTime()"> <!-- 使用 onload 事件调用 updateTime 函数 -->
       <h1 class="animated-text">我爱你<span class="heart">❤</span>，小莹！</h1>
       <p id="time-together"></p>
-      <script>
-        updateTime(); // 初始化时间
-      </script>
     </body>
     </html>
     '''
