@@ -38,8 +38,8 @@ def hello_world():
       <script>
         function updateTime() {{
           var element = document.getElementById("time-together");
-          var timeString = "{days}天 {hours}小时 {minutes}分钟 {seconds}秒";
-          element.innerText = "我们在一起已经 " + timeString;
+          var currentTime = new Date().toLocaleTimeString();
+          element.innerText = "我们在一起已经 " + currentTime;
         }}
         
         setInterval(updateTime, 1000); // 每秒更新一次时间
