@@ -1,13 +1,11 @@
 from flask import Flask
-import datetime
 
 app = Flask(__name__)
 
-start_time = datetime.datetime(2022, 5, 20)  # 设置起始时间
+start_time = "2022-05-20T00:00:00"  # 设置起始时间
 
 @app.route('/')
 def hello_world():
-
     return f'''
     <html>
     <head>
@@ -31,14 +29,17 @@ def hello_world():
       </style>
       <script>
         function updateTime() {{
-          var  current_time = datetime.datetime.now();
-          var  time_difference = current_time - start_time;
+          var current_time = new Date();
+          var start_time = new Date("{start_time}");
+          var time_difference = current_time - start_time;
 
-          var days = time_difference.days;
-          var minutes, seconds = divmod(time_difference.seconds, 60);
-          var hours, minutes = divmod(minutes, 60);
+          var days = Math.floor(time_difference / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((time_difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((time_difference % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((time_difference % (1000 * 60)) / 1000);
+
           var element = document.getElementById("time-together");
-          var timeString = "{days}天 {hours}小时 {minutes}分钟 {seconds}秒";
+          var timeString = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
           element.innerHTML = "我们在一起已经 " + timeString;
         }}
         
