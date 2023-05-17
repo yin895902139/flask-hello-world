@@ -3,7 +3,7 @@ import datetime
 
 app = Flask(__name__)
 
-start_time = datetime.datetime(2022, 5, 20)  # 设置起始时间
+start_time = datetime.datetime(2023, 5, 20)  # 设置起始时间
 
 @app.route('/')
 def hello_world():
@@ -42,7 +42,7 @@ def hello_world():
           element.innerText = "我们在一起已经 " + timeString;
         }}
         
-        setInterval(updateTime, 1000); // 每秒更新一次时间
+        window.setInterval(updateTime, 1000); // 每秒更新一次时间
       </script>
     </head>
     <body onload="updateTime()"> <!-- 使用 onload 事件调用 updateTime 函数 -->
