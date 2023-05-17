@@ -38,7 +38,7 @@ def hello_world():
       <script>
         function updateTime() {{
           var element = document.getElementById("time-together");
-          var timeString = "{days}天 {hours}小时 {minutes}分钟 {seconds}秒啦<span class="heart">❤❤❤</span>";
+          var timeString = "{days}天 {hours}小时 {minutes}分钟 {seconds}秒";
           element.innerText = "我们在一起已经 " + timeString;
         }}
         
@@ -47,7 +47,6 @@ def hello_world():
     </head>
     <body>
       <h1 class="animated-text">我爱你<span class="heart">❤</span>，小莹！</h1>
-      <p>现在时间是：<span id="current-time"></span></p>
       <p id="time-together"></p>
       <script>
         updateTime(); // 初始化时间
