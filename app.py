@@ -20,10 +20,16 @@ def hello_world():
         .animated-text {
           animation: text-animation 2s infinite;
         }
+
+        /* 设置桃心字符的文本颜色为红色 */
+        .heart {
+          color: red;
+        }
+
       </style>
     </head>
     <body>
-      <h1 class="animated-text">我爱你，小莹！\u2764</h1>
+      <h1 class="animated-text">我爱你，小莹<span class="heart">\u2764</span>！</h1>
     </body>
     </html>
     '''
